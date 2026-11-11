@@ -1,0 +1,747 @@
+[
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetWaveform",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetFrequency",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetAmplitude",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetAmplitude-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetOffset",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetOffset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetDutyCycle",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetLoad",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetLoad-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorOutputEnable",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0",
+      "rigol.dg4102|B|FunctionGeneratorOutputEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetBurstCount",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetBurstCount-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetBurstState",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetBurstState-0",
+      "rigol.dg4102|B|FunctionGeneratorSetBurstState-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorSetBurstTriggerSource",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetBurstTriggerSource-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "FunctionGeneratorReadFrequency",
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "QueryIdentity",
+    "cases": [
+      "rigol.dg4102|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "Reset",
+    "cases": [
+      "rigol.dg4102|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dg4102",
+    "operation": "Shutdown",
+    "cases": [
+      "rigol.dg4102|B|Shutdown-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyChannelCount",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyChannelCount-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplySetVoltage",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplySetVoltage-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplySetCurrentLimit",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyOutputEnable",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyOutputEnable-0",
+      "rigol.dp832|B|DcPowerSupplyOutputEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyOutputStateQuery",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyOutputStateQuery-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyOvpLevel",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyOvpLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyOvpEnable",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyOvpEnable-0",
+      "rigol.dp832|B|DcPowerSupplyOvpEnable-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyOvpQuery",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyOvpQuery-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyReadVoltage",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyReadVoltage-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplyReadCurrent",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyReadCurrent-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "DcPowerSupplySetSenseMode",
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplySetSenseMode-0",
+      "rigol.dp832|B|DcPowerSupplySetSenseMode-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "QueryIdentity",
+    "cases": [
+      "rigol.dp832|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "Reset",
+    "cases": [
+      "rigol.dp832|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dp832",
+    "operation": "Shutdown",
+    "cases": [
+      "rigol.dp832|B|Shutdown-0"
+    ],
+    "disposition": "implemented-with-explicit-inventory-binding"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetTimebaseScale",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeReadTimebaseScale",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeReadTimebaseScale-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetChannelScale",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelScale-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetChannelDisplay",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0",
+      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetChannelCoupling",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetTriggerSource",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetTriggerLevel",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetTriggerLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSetTriggerSlope",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetTriggerSlope-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeRun",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeRun-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeStop",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeStop-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeSingle",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSingle-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeMeasureVpp",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeMeasureFrequency",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "OscilloscopeCaptureVoltageTrace",
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "QueryIdentity",
+    "cases": [
+      "rigol.ds1054z|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "Reset",
+    "cases": [
+      "rigol.ds1054z|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.ds1054z",
+    "operation": "Shutdown",
+    "cases": [
+      "rigol.ds1054z|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSetCenterFrequency",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSetSpan",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSetRbw",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSetVbw",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSetRefLevel",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerFetchTraceAscii",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerFetchTraceAscii-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerMarkerPeak",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerMarkerPeak-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerMarkerX",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerMarkerX-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerMarkerY",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerMarkerY-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSweepContinuous",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerSingleSweep",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSingleSweep-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "SpectrumAnalyzerWaitOpc",
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerWaitOpc-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "QueryIdentity",
+    "cases": [
+      "rigol.dsa815|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "Reset",
+    "cases": [
+      "rigol.dsa815|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa815",
+    "operation": "Shutdown",
+    "cases": [
+      "rigol.dsa815|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSetCenterFrequency",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSetSpan",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSetRbw",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSetVbw",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSetRefLevel",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerFetchTraceAscii",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerFetchTraceAscii-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerMarkerPeak",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerMarkerPeak-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerMarkerX",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerMarkerX-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerMarkerY",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerMarkerY-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSweepContinuous",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerSingleSweep",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSingleSweep-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "SpectrumAnalyzerWaitOpc",
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerWaitOpc-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "QueryIdentity",
+    "cases": [
+      "rigol.dsa832|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "Reset",
+    "cases": [
+      "rigol.dsa832|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.dsa832",
+    "operation": "Shutdown",
+    "cases": [
+      "rigol.dsa832|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetTimebaseScale",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeReadTimebaseScale",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeReadTimebaseScale-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetChannelScale",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelScale-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetChannelDisplay",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0",
+      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-1"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetChannelCoupling",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetTriggerSource",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetTriggerLevel",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetTriggerLevel-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSetTriggerSlope",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetTriggerSlope-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeRun",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeRun-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeStop",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeStop-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeSingle",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSingle-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeMeasureVpp",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeMeasureVpp-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeMeasureFrequency",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "OscilloscopeCaptureVoltageTrace",
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "QueryIdentity",
+    "cases": [
+      "rigol.mso5074|B|QueryIdentity-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "Reset",
+    "cases": [
+      "rigol.mso5074|B|Reset-0"
+    ],
+    "disposition": "implemented"
+  },
+  {
+    "driver": "rigol.mso5074",
+    "operation": "Shutdown",
+    "cases": [
+      "rigol.mso5074|B|Shutdown-0"
+    ],
+    "disposition": "implemented"
+  }
+]
