@@ -758,5 +758,669 @@ CatalogRequest::OscilloscopeSetChannelScale { channel: 99, volts_per_div: 1.0 },
 ScriptStep::Close(Ok(())),
 ],
 expected: None, expected_error: Some(ErrorKind::InvalidArgument) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetWaveform-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetWaveform { waveform: Waveform::Sine },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:FUNC SIN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetFrequency-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetFrequency { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:FREQ 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetAmplitude-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetAmplitude { vpp: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:VOLT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetOffset-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetOffset { volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:VOLT:OFFS 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetDutyCycle { percent: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:FUNC:SQU:DCYC 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetLoad-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetLoad { ohms: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP:LOAD 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorOutputEnable-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorOutputEnable { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetBurstCount-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetBurstCount { count: 1 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:BURS:NCYC 1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetBurstState-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetBurstState { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR:BURS:STAT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorSetBurstTriggerSource-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorSetBurstTriggerSource { source: "IMM".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIG:SOUR IMM".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|FunctionGeneratorReadFrequency-0-transport-failure", calls: vec![
+CatalogRequest::FunctionGeneratorReadFrequency,
+], script: vec![
+ScriptStep::Query(":SOUR:FREQ?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dg4102|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":OUTP OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplySetVoltage-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetVoltage { channel: 1, volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetCurrentLimit { channel: 1, amps: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:CURR 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyOutputEnable-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOutputEnable { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1 ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyOutputStateQuery-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOutputStateQuery { channel: 1 },
+], script: vec![
+ScriptStep::Query(":OUTP1?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyOvpLevel-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpLevel { channel: 1, volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT:PROT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyOvpEnable-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpEnable { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":SOUR1:VOLT:PROT:STAT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyOvpQuery-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyOvpQuery { channel: 1 },
+], script: vec![
+ScriptStep::Query(":SOUR1:VOLT:PROT:STAT?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyReadVoltage-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyReadVoltage { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEAS:VOLT? 1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplyReadCurrent-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplyReadCurrent { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEAS:CURR? 1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|DcPowerSupplySetSenseMode-0-transport-failure", calls: vec![
+CatalogRequest::DcPowerSupplySetSenseMode { channel: 1, mode: SenseMode::Internal },
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1:SENS OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dp832|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":OUTP1 OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Write(":OUTP3 OFF".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTimebaseScale { seconds_per_div: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":TIMebase:SCALe 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeReadTimebaseScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeReadTimebaseScale,
+], script: vec![
+ScriptStep::Query(":TIMebase:SCALe?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetChannelScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelScale { channel: 1, volts_per_div: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:SCALe 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelDisplay { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:DISP ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelCoupling { channel: 1, coupling: "DC".into() },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:COUP DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN1".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:SOURce CHAN1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetTriggerLevel-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerLevel { volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:LEVel 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSetTriggerSlope-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSlope { slope: "POS".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:SLOPe POS".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeRun-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeRun,
+], script: vec![
+ScriptStep::WriteFailure(":RUN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeStop-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeStop,
+], script: vec![
+ScriptStep::WriteFailure(":STOP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeSingle-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSingle,
+], script: vec![
+ScriptStep::WriteFailure(":SINGle".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeMeasureVpp-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeMeasureVpp { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEASure:VPP? CHAN1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeMeasureFrequency { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEASure:FREQuency? CHAN1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeCaptureVoltageTrace { channel: 1 },
+], script: vec![
+ScriptStep::WriteFailure(":WAVeform:SOURce CHAN1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.ds1054z|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":STOP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":FREQ:CENT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":FREQ:SPAN 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":BAND 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":BAND:VID 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":DISP:WIND:TRAC:Y:RLEV 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerFetchTraceAscii,
+], script: vec![
+ScriptStep::Query(":TRAC? TRACE1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerMarkerPeak-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::WriteFailure(":CALC:MARK:MAX".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerMarkerX-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Query(":CALC:MARK:X?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerMarkerY-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Query(":CALC:MARK:Y?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSweepContinuous { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":INIT:CONT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerSingleSweep-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSingleSweep,
+], script: vec![
+ScriptStep::WriteFailure(":INIT".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|SpectrumAnalyzerWaitOpc-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerWaitOpc,
+], script: vec![
+ScriptStep::Query("*OPC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa815|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":INIT:CONT OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetCenterFrequency { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":FREQ:CENT 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetSpan { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":FREQ:SPAN 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRbw { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":BAND 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetVbw { hz: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":BAND:VID 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSetRefLevel { dbm: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":DISP:WIND:TRAC:Y:RLEV 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerFetchTraceAscii-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerFetchTraceAscii,
+], script: vec![
+ScriptStep::Query(":TRAC? TRACE1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerMarkerPeak-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerPeak,
+], script: vec![
+ScriptStep::WriteFailure(":CALC:MARK:MAX".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerMarkerX-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerX,
+], script: vec![
+ScriptStep::Query(":CALC:MARK:X?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerMarkerY-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerMarkerY,
+], script: vec![
+ScriptStep::Query(":CALC:MARK:Y?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSweepContinuous { enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":INIT:CONT ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerSingleSweep-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerSingleSweep,
+], script: vec![
+ScriptStep::WriteFailure(":INIT".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|SpectrumAnalyzerWaitOpc-0-transport-failure", calls: vec![
+CatalogRequest::SpectrumAnalyzerWaitOpc,
+], script: vec![
+ScriptStep::Query("*OPC?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.dsa832|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":INIT:CONT OFF".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTimebaseScale { seconds_per_div: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":TIMebase:SCALe 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeReadTimebaseScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeReadTimebaseScale,
+], script: vec![
+ScriptStep::Query(":TIMebase:SCALe?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetChannelScale-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelScale { channel: 1, volts_per_div: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:SCALe 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelDisplay { channel: 1, enabled: true },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:DISP ON".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetChannelCoupling { channel: 1, coupling: "DC".into() },
+], script: vec![
+ScriptStep::WriteFailure(":CHANnel1:COUP DC".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetTriggerSource-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN1".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:SOURce CHAN1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetTriggerLevel-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerLevel { volts: 2.5 },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:LEVel 2.5".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSetTriggerSlope-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSlope { slope: "POS".into() },
+], script: vec![
+ScriptStep::WriteFailure(":TRIGger:EDGE:SLOPe POS".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeRun-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeRun,
+], script: vec![
+ScriptStep::WriteFailure(":RUN".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeStop-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeStop,
+], script: vec![
+ScriptStep::WriteFailure(":STOP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeSingle-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeSingle,
+], script: vec![
+ScriptStep::WriteFailure(":SINGle".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeMeasureVpp-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeMeasureVpp { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEASure:VPP? CHAN1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeMeasureFrequency-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeMeasureFrequency { channel: 1 },
+], script: vec![
+ScriptStep::Query(":MEASure:FREQuency? CHAN1".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0-transport-failure", calls: vec![
+CatalogRequest::OscilloscopeCaptureVoltageTrace { channel: 1 },
+], script: vec![
+ScriptStep::WriteFailure(":WAVeform:SOURce CHAN1".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|QueryIdentity-0-transport-failure", calls: vec![
+CatalogRequest::QueryIdentity,
+], script: vec![
+ScriptStep::Query("*IDN?".into(), Err(instrument_api::DriverError::new(ErrorKind::Transport, "injected"))),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|Reset-0-transport-failure", calls: vec![
+CatalogRequest::Reset,
+], script: vec![
+ScriptStep::WriteFailure("*RST".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Transport) },
+CatalogCase { id: "rigol.mso5074|B|Shutdown-0-transport-failure", calls: vec![
+CatalogRequest::Shutdown,
+], script: vec![
+ScriptStep::WriteFailure(":STOP".into(), instrument_api::DriverError::new(ErrorKind::Transport, "injected")),
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::Shutdown) },
+CatalogCase { id: "rigol.ds1054z|B|bound-source-CHAN3", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN3".into() },
+], script: vec![
+ScriptStep::Write(":TRIGger:EDGE:SOURce CHAN3".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "rigol.ds1054z|B|bound-source-CHAN2", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN2".into() },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
+CatalogCase { id: "rigol.mso5074|B|bound-source-CHAN3", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN3".into() },
+], script: vec![
+ScriptStep::Write(":TRIGger:EDGE:SOURce CHAN3".into()),
+ScriptStep::Close(Ok(())),
+],
+expected: Some(CatalogReply::Unit), expected_error: None },
+CatalogCase { id: "rigol.mso5074|B|bound-source-CHAN2", calls: vec![
+CatalogRequest::OscilloscopeSetTriggerSource { source: "CHAN2".into() },
+], script: vec![
+ScriptStep::Close(Ok(())),
+],
+expected: None, expected_error: Some(ErrorKind::UnsupportedOperation) },
 ] }
 }
