@@ -1,29 +1,28 @@
 [
   {
     "cases": [
-      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0",
-      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0-transport-failure"
+      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0",
+      "rigol.dg4102|B|FunctionGeneratorOutputEnable-1",
+      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dg4102",
     "negativeCases": [
-      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0-transport-failure"
+      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0-transport-failure"
     ],
-    "operation": "FunctionGeneratorSetWaveform"
+    "operation": "FunctionGeneratorOutputEnable"
   },
   {
     "cases": [
-      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0",
-      "rigol.dg4102|B|invalid-FunctionGeneratorSetFrequency",
-      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0-transport-failure"
+      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0",
+      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dg4102",
     "negativeCases": [
-      "rigol.dg4102|B|invalid-FunctionGeneratorSetFrequency",
-      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0-transport-failure"
+      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0-transport-failure"
     ],
-    "operation": "FunctionGeneratorSetFrequency"
+    "operation": "FunctionGeneratorReadFrequency"
   },
   {
     "cases": [
@@ -36,55 +35,6 @@
       "rigol.dg4102|B|FunctionGeneratorSetAmplitude-0-transport-failure"
     ],
     "operation": "FunctionGeneratorSetAmplitude"
-  },
-  {
-    "cases": [
-      "rigol.dg4102|B|FunctionGeneratorSetOffset-0",
-      "rigol.dg4102|B|FunctionGeneratorSetOffset-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dg4102",
-    "negativeCases": [
-      "rigol.dg4102|B|FunctionGeneratorSetOffset-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorSetOffset"
-  },
-  {
-    "cases": [
-      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0",
-      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dg4102",
-    "negativeCases": [
-      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorSetDutyCycle"
-  },
-  {
-    "cases": [
-      "rigol.dg4102|B|FunctionGeneratorSetLoad-0",
-      "rigol.dg4102|B|FunctionGeneratorSetLoad-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dg4102",
-    "negativeCases": [
-      "rigol.dg4102|B|FunctionGeneratorSetLoad-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorSetLoad"
-  },
-  {
-    "cases": [
-      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0",
-      "rigol.dg4102|B|FunctionGeneratorOutputEnable-1",
-      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dg4102",
-    "negativeCases": [
-      "rigol.dg4102|B|FunctionGeneratorOutputEnable-0-transport-failure"
-    ],
-    "operation": "FunctionGeneratorOutputEnable"
   },
   {
     "cases": [
@@ -125,15 +75,65 @@
   },
   {
     "cases": [
-      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0",
-      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0-transport-failure"
+      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0",
+      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dg4102",
     "negativeCases": [
-      "rigol.dg4102|B|FunctionGeneratorReadFrequency-0-transport-failure"
+      "rigol.dg4102|B|FunctionGeneratorSetDutyCycle-0-transport-failure"
     ],
-    "operation": "FunctionGeneratorReadFrequency"
+    "operation": "FunctionGeneratorSetDutyCycle"
+  },
+  {
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0",
+      "rigol.dg4102|B|invalid-FunctionGeneratorSetFrequency",
+      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dg4102",
+    "negativeCases": [
+      "rigol.dg4102|B|invalid-FunctionGeneratorSetFrequency",
+      "rigol.dg4102|B|FunctionGeneratorSetFrequency-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetFrequency"
+  },
+  {
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetLoad-0",
+      "rigol.dg4102|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dg4102",
+    "negativeCases": [
+      "rigol.dg4102|B|FunctionGeneratorSetLoad-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetLoad"
+  },
+  {
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetOffset-0",
+      "rigol.dg4102|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dg4102",
+    "negativeCases": [
+      "rigol.dg4102|B|FunctionGeneratorSetOffset-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetOffset"
+  },
+  {
+    "cases": [
+      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0",
+      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dg4102",
+    "negativeCases": [
+      "rigol.dg4102|B|FunctionGeneratorSetWaveform-0-transport-failure"
+    ],
+    "operation": "FunctionGeneratorSetWaveform"
   },
   {
     "cases": [
@@ -161,29 +161,29 @@
   },
   {
     "cases": [
-      "rigol.dp832|B|DcPowerSupplySetVoltage-0",
-      "rigol.dp832|B|invalid-DcPowerSupplySetVoltage",
-      "rigol.dp832|B|DcPowerSupplySetVoltage-0-transport-failure"
+      "rigol.dg4102|B|Shutdown-0",
+      "rigol.dg4102|U|unknown-Shutdown",
+      "rigol.dg4102|B|Shutdown-0-transport-failure"
     ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dp832",
+    "disposition": "explicit-inventory-binding-required",
+    "driver": "rigol.dg4102",
     "negativeCases": [
-      "rigol.dp832|B|invalid-DcPowerSupplySetVoltage",
-      "rigol.dp832|B|DcPowerSupplySetVoltage-0-transport-failure"
+      "rigol.dg4102|U|unknown-Shutdown",
+      "rigol.dg4102|B|Shutdown-0-transport-failure"
     ],
-    "operation": "DcPowerSupplySetVoltage"
+    "operation": "Shutdown"
   },
   {
     "cases": [
-      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0",
-      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+      "rigol.dp832|B|DcPowerSupplyChannelCount-0",
+      "rigol.dp832|U|unknown-DcPowerSupplyChannelCount"
     ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "disposition": "explicit-inventory-binding-required",
     "driver": "rigol.dp832",
     "negativeCases": [
-      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
+      "rigol.dp832|U|unknown-DcPowerSupplyChannelCount"
     ],
-    "operation": "DcPowerSupplySetCurrentLimit"
+    "operation": "DcPowerSupplyChannelCount"
   },
   {
     "cases": [
@@ -212,18 +212,6 @@
   },
   {
     "cases": [
-      "rigol.dp832|B|DcPowerSupplyOvpLevel-0",
-      "rigol.dp832|B|DcPowerSupplyOvpLevel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dp832",
-    "negativeCases": [
-      "rigol.dp832|B|DcPowerSupplyOvpLevel-0-transport-failure"
-    ],
-    "operation": "DcPowerSupplyOvpLevel"
-  },
-  {
-    "cases": [
       "rigol.dp832|B|DcPowerSupplyOvpEnable-0",
       "rigol.dp832|B|DcPowerSupplyOvpEnable-1",
       "rigol.dp832|B|DcPowerSupplyOvpEnable-0-transport-failure"
@@ -234,6 +222,18 @@
       "rigol.dp832|B|DcPowerSupplyOvpEnable-0-transport-failure"
     ],
     "operation": "DcPowerSupplyOvpEnable"
+  },
+  {
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplyOvpLevel-0",
+      "rigol.dp832|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dp832",
+    "negativeCases": [
+      "rigol.dp832|B|DcPowerSupplyOvpLevel-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyOvpLevel"
   },
   {
     "cases": [
@@ -249,6 +249,18 @@
   },
   {
     "cases": [
+      "rigol.dp832|B|DcPowerSupplyReadCurrent-0",
+      "rigol.dp832|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dp832",
+    "negativeCases": [
+      "rigol.dp832|B|DcPowerSupplyReadCurrent-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplyReadCurrent"
+  },
+  {
+    "cases": [
       "rigol.dp832|B|DcPowerSupplyReadVoltage-0",
       "rigol.dp832|B|DcPowerSupplyReadVoltage-0-transport-failure"
     ],
@@ -261,15 +273,15 @@
   },
   {
     "cases": [
-      "rigol.dp832|B|DcPowerSupplyReadCurrent-0",
-      "rigol.dp832|B|DcPowerSupplyReadCurrent-0-transport-failure"
+      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0",
+      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dp832",
     "negativeCases": [
-      "rigol.dp832|B|DcPowerSupplyReadCurrent-0-transport-failure"
+      "rigol.dp832|B|DcPowerSupplySetCurrentLimit-0-transport-failure"
     ],
-    "operation": "DcPowerSupplyReadCurrent"
+    "operation": "DcPowerSupplySetCurrentLimit"
   },
   {
     "cases": [
@@ -283,6 +295,20 @@
       "rigol.dp832|B|DcPowerSupplySetSenseMode-0-transport-failure"
     ],
     "operation": "DcPowerSupplySetSenseMode"
+  },
+  {
+    "cases": [
+      "rigol.dp832|B|DcPowerSupplySetVoltage-0",
+      "rigol.dp832|B|invalid-DcPowerSupplySetVoltage",
+      "rigol.dp832|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dp832",
+    "negativeCases": [
+      "rigol.dp832|B|invalid-DcPowerSupplySetVoltage",
+      "rigol.dp832|B|DcPowerSupplySetVoltage-0-transport-failure"
+    ],
+    "operation": "DcPowerSupplySetVoltage"
   },
   {
     "cases": [
@@ -310,15 +336,53 @@
   },
   {
     "cases": [
-      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0",
-      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+      "rigol.dp832|B|Shutdown-0",
+      "rigol.dp832|U|unknown-Shutdown",
+      "rigol.dp832|B|Shutdown-0-transport-failure"
+    ],
+    "disposition": "explicit-inventory-binding-required",
+    "driver": "rigol.dp832",
+    "negativeCases": [
+      "rigol.dp832|U|unknown-Shutdown",
+      "rigol.dp832|B|Shutdown-0-transport-failure"
+    ],
+    "operation": "Shutdown"
+  },
+  {
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0",
+      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.ds1054z",
     "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
-    "operation": "OscilloscopeSetTimebaseScale"
+    "operation": "OscilloscopeCaptureVoltageTrace"
+  },
+  {
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0",
+      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.ds1054z",
+    "negativeCases": [
+      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "operation": "OscilloscopeMeasureFrequency"
+  },
+  {
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0",
+      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.ds1054z",
+    "negativeCases": [
+      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "operation": "OscilloscopeMeasureVpp"
   },
   {
     "cases": [
@@ -331,6 +395,43 @@
       "rigol.ds1054z|B|OscilloscopeReadTimebaseScale-0-transport-failure"
     ],
     "operation": "OscilloscopeReadTimebaseScale"
+  },
+  {
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeRun-0",
+      "rigol.ds1054z|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.ds1054z",
+    "negativeCases": [
+      "rigol.ds1054z|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "operation": "OscilloscopeRun"
+  },
+  {
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0",
+      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.ds1054z",
+    "negativeCases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelCoupling"
+  },
+  {
+    "cases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0",
+      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-1",
+      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.ds1054z",
+    "negativeCases": [
+      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelDisplay"
   },
   {
     "cases": [
@@ -348,43 +449,15 @@
   },
   {
     "cases": [
-      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0",
-      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-1",
-      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0",
+      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.ds1054z",
     "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
-    "operation": "OscilloscopeSetChannelDisplay"
-  },
-  {
-    "cases": [
-      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0",
-      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.ds1054z",
-    "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeSetChannelCoupling-0-transport-failure"
-    ],
-    "operation": "OscilloscopeSetChannelCoupling"
-  },
-  {
-    "cases": [
-      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0",
-      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0-transport-failure",
-      "rigol.ds1054z|B|bound-source-CHAN3",
-      "rigol.ds1054z|B|bound-source-CHAN2"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.ds1054z",
-    "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0-transport-failure",
-      "rigol.ds1054z|B|bound-source-CHAN2"
-    ],
-    "operation": "OscilloscopeSetTriggerSource"
+    "operation": "OscilloscopeSetTimebaseScale"
   },
   {
     "cases": [
@@ -412,27 +485,18 @@
   },
   {
     "cases": [
-      "rigol.ds1054z|B|OscilloscopeRun-0",
-      "rigol.ds1054z|B|OscilloscopeRun-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0",
+      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "rigol.ds1054z|B|bound-source-CHAN3",
+      "rigol.ds1054z|B|bound-source-CHAN2"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.ds1054z",
     "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeRun-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "rigol.ds1054z|B|bound-source-CHAN2"
     ],
-    "operation": "OscilloscopeRun"
-  },
-  {
-    "cases": [
-      "rigol.ds1054z|B|OscilloscopeStop-0",
-      "rigol.ds1054z|B|OscilloscopeStop-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.ds1054z",
-    "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeStop-0-transport-failure"
-    ],
-    "operation": "OscilloscopeStop"
+    "operation": "OscilloscopeSetTriggerSource"
   },
   {
     "cases": [
@@ -448,39 +512,15 @@
   },
   {
     "cases": [
-      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0",
-      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeStop-0",
+      "rigol.ds1054z|B|OscilloscopeStop-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.ds1054z",
     "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeMeasureVpp-0-transport-failure"
+      "rigol.ds1054z|B|OscilloscopeStop-0-transport-failure"
     ],
-    "operation": "OscilloscopeMeasureVpp"
-  },
-  {
-    "cases": [
-      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0",
-      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.ds1054z",
-    "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeMeasureFrequency-0-transport-failure"
-    ],
-    "operation": "OscilloscopeMeasureFrequency"
-  },
-  {
-    "cases": [
-      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0",
-      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.ds1054z",
-    "negativeCases": [
-      "rigol.ds1054z|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
-    ],
-    "operation": "OscilloscopeCaptureVoltageTrace"
+    "operation": "OscilloscopeStop"
   },
   {
     "cases": [
@@ -520,63 +560,39 @@
   },
   {
     "cases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0",
-      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
+      "rigol.dsa815|B|QueryIdentity-0",
+      "rigol.dsa815|B|QueryIdentity-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dsa815",
     "negativeCases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
+      "rigol.dsa815|B|QueryIdentity-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSetCenterFrequency"
+    "operation": "QueryIdentity"
   },
   {
     "cases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0",
-      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+      "rigol.dsa815|B|Reset-0",
+      "rigol.dsa815|B|Reset-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dsa815",
     "negativeCases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+      "rigol.dsa815|B|Reset-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSetSpan"
+    "operation": "Reset"
   },
   {
     "cases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0",
-      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+      "rigol.dsa815|B|Shutdown-0",
+      "rigol.dsa815|B|Shutdown-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dsa815",
     "negativeCases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+      "rigol.dsa815|B|Shutdown-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSetRbw"
-  },
-  {
-    "cases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0",
-      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa815",
-    "negativeCases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetVbw"
-  },
-  {
-    "cases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0",
-      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa815",
-    "negativeCases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetRefLevel"
+    "operation": "Shutdown"
   },
   {
     "cases": [
@@ -628,16 +644,63 @@
   },
   {
     "cases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0",
-      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-1",
-      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dsa815",
     "negativeCases": [
-      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+      "rigol.dsa815|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSweepContinuous"
+    "operation": "SpectrumAnalyzerSetCenterFrequency"
+  },
+  {
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa815",
+    "negativeCases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRbw"
+  },
+  {
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa815",
+    "negativeCases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRefLevel"
+  },
+  {
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa815",
+    "negativeCases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetSpan"
+  },
+  {
+    "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa815",
+    "negativeCases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetVbw"
   },
   {
     "cases": [
@@ -653,6 +716,19 @@
   },
   {
     "cases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0",
+      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-1",
+      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa815",
+    "negativeCases": [
+      "rigol.dsa815|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSweepContinuous"
+  },
+  {
+    "cases": [
       "rigol.dsa815|B|SpectrumAnalyzerWaitOpc-0",
       "rigol.dsa815|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
@@ -665,99 +741,39 @@
   },
   {
     "cases": [
-      "rigol.dsa815|B|QueryIdentity-0",
-      "rigol.dsa815|B|QueryIdentity-0-transport-failure"
+      "rigol.dsa832|B|QueryIdentity-0",
+      "rigol.dsa832|B|QueryIdentity-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa815",
+    "driver": "rigol.dsa832",
     "negativeCases": [
-      "rigol.dsa815|B|QueryIdentity-0-transport-failure"
+      "rigol.dsa832|B|QueryIdentity-0-transport-failure"
     ],
     "operation": "QueryIdentity"
   },
   {
     "cases": [
-      "rigol.dsa815|B|Reset-0",
-      "rigol.dsa815|B|Reset-0-transport-failure"
+      "rigol.dsa832|B|Reset-0",
+      "rigol.dsa832|B|Reset-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa815",
+    "driver": "rigol.dsa832",
     "negativeCases": [
-      "rigol.dsa815|B|Reset-0-transport-failure"
+      "rigol.dsa832|B|Reset-0-transport-failure"
     ],
     "operation": "Reset"
   },
   {
     "cases": [
-      "rigol.dsa815|B|Shutdown-0",
-      "rigol.dsa815|B|Shutdown-0-transport-failure"
+      "rigol.dsa832|B|Shutdown-0",
+      "rigol.dsa832|B|Shutdown-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa815",
+    "driver": "rigol.dsa832",
     "negativeCases": [
-      "rigol.dsa815|B|Shutdown-0-transport-failure"
+      "rigol.dsa832|B|Shutdown-0-transport-failure"
     ],
     "operation": "Shutdown"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0",
-      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetCenterFrequency"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0",
-      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetSpan"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0",
-      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetRbw"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0",
-      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetVbw"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0",
-      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
-    ],
-    "operation": "SpectrumAnalyzerSetRefLevel"
   },
   {
     "cases": [
@@ -809,16 +825,63 @@
   },
   {
     "cases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0",
-      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-1",
-      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.dsa832",
     "negativeCases": [
-      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+      "rigol.dsa832|B|SpectrumAnalyzerSetCenterFrequency-0-transport-failure"
     ],
-    "operation": "SpectrumAnalyzerSweepContinuous"
+    "operation": "SpectrumAnalyzerSetCenterFrequency"
+  },
+  {
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa832",
+    "negativeCases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetRbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRbw"
+  },
+  {
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa832",
+    "negativeCases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetRefLevel-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetRefLevel"
+  },
+  {
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa832",
+    "negativeCases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetSpan-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetSpan"
+  },
+  {
+    "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa832",
+    "negativeCases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSetVbw-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSetVbw"
   },
   {
     "cases": [
@@ -834,6 +897,19 @@
   },
   {
     "cases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0",
+      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-1",
+      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.dsa832",
+    "negativeCases": [
+      "rigol.dsa832|B|SpectrumAnalyzerSweepContinuous-0-transport-failure"
+    ],
+    "operation": "SpectrumAnalyzerSweepContinuous"
+  },
+  {
+    "cases": [
       "rigol.dsa832|B|SpectrumAnalyzerWaitOpc-0",
       "rigol.dsa832|B|SpectrumAnalyzerWaitOpc-0-transport-failure"
     ],
@@ -846,51 +922,39 @@
   },
   {
     "cases": [
-      "rigol.dsa832|B|QueryIdentity-0",
-      "rigol.dsa832|B|QueryIdentity-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|QueryIdentity-0-transport-failure"
-    ],
-    "operation": "QueryIdentity"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|Reset-0",
-      "rigol.dsa832|B|Reset-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|Reset-0-transport-failure"
-    ],
-    "operation": "Reset"
-  },
-  {
-    "cases": [
-      "rigol.dsa832|B|Shutdown-0",
-      "rigol.dsa832|B|Shutdown-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.dsa832",
-    "negativeCases": [
-      "rigol.dsa832|B|Shutdown-0-transport-failure"
-    ],
-    "operation": "Shutdown"
-  },
-  {
-    "cases": [
-      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0",
-      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0",
+      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.mso5074",
     "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
     ],
-    "operation": "OscilloscopeSetTimebaseScale"
+    "operation": "OscilloscopeCaptureVoltageTrace"
+  },
+  {
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0",
+      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.mso5074",
+    "negativeCases": [
+      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0-transport-failure"
+    ],
+    "operation": "OscilloscopeMeasureFrequency"
+  },
+  {
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeMeasureVpp-0",
+      "rigol.mso5074|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.mso5074",
+    "negativeCases": [
+      "rigol.mso5074|B|OscilloscopeMeasureVpp-0-transport-failure"
+    ],
+    "operation": "OscilloscopeMeasureVpp"
   },
   {
     "cases": [
@@ -903,6 +967,43 @@
       "rigol.mso5074|B|OscilloscopeReadTimebaseScale-0-transport-failure"
     ],
     "operation": "OscilloscopeReadTimebaseScale"
+  },
+  {
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeRun-0",
+      "rigol.mso5074|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.mso5074",
+    "negativeCases": [
+      "rigol.mso5074|B|OscilloscopeRun-0-transport-failure"
+    ],
+    "operation": "OscilloscopeRun"
+  },
+  {
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0",
+      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.mso5074",
+    "negativeCases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelCoupling"
+  },
+  {
+    "cases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0",
+      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-1",
+      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+    ],
+    "disposition": "implemented-source-derived-no-hardware-evidence",
+    "driver": "rigol.mso5074",
+    "negativeCases": [
+      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+    ],
+    "operation": "OscilloscopeSetChannelDisplay"
   },
   {
     "cases": [
@@ -920,43 +1021,15 @@
   },
   {
     "cases": [
-      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0",
-      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-1",
-      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0",
+      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.mso5074",
     "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeSetChannelDisplay-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeSetTimebaseScale-0-transport-failure"
     ],
-    "operation": "OscilloscopeSetChannelDisplay"
-  },
-  {
-    "cases": [
-      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0",
-      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.mso5074",
-    "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeSetChannelCoupling-0-transport-failure"
-    ],
-    "operation": "OscilloscopeSetChannelCoupling"
-  },
-  {
-    "cases": [
-      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0",
-      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0-transport-failure",
-      "rigol.mso5074|B|bound-source-CHAN3",
-      "rigol.mso5074|B|bound-source-CHAN2"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.mso5074",
-    "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0-transport-failure",
-      "rigol.mso5074|B|bound-source-CHAN2"
-    ],
-    "operation": "OscilloscopeSetTriggerSource"
+    "operation": "OscilloscopeSetTimebaseScale"
   },
   {
     "cases": [
@@ -984,27 +1057,18 @@
   },
   {
     "cases": [
-      "rigol.mso5074|B|OscilloscopeRun-0",
-      "rigol.mso5074|B|OscilloscopeRun-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0",
+      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "rigol.mso5074|B|bound-source-CHAN3",
+      "rigol.mso5074|B|bound-source-CHAN2"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.mso5074",
     "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeRun-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeSetTriggerSource-0-transport-failure",
+      "rigol.mso5074|B|bound-source-CHAN2"
     ],
-    "operation": "OscilloscopeRun"
-  },
-  {
-    "cases": [
-      "rigol.mso5074|B|OscilloscopeStop-0",
-      "rigol.mso5074|B|OscilloscopeStop-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.mso5074",
-    "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeStop-0-transport-failure"
-    ],
-    "operation": "OscilloscopeStop"
+    "operation": "OscilloscopeSetTriggerSource"
   },
   {
     "cases": [
@@ -1020,39 +1084,15 @@
   },
   {
     "cases": [
-      "rigol.mso5074|B|OscilloscopeMeasureVpp-0",
-      "rigol.mso5074|B|OscilloscopeMeasureVpp-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeStop-0",
+      "rigol.mso5074|B|OscilloscopeStop-0-transport-failure"
     ],
     "disposition": "implemented-source-derived-no-hardware-evidence",
     "driver": "rigol.mso5074",
     "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeMeasureVpp-0-transport-failure"
+      "rigol.mso5074|B|OscilloscopeStop-0-transport-failure"
     ],
-    "operation": "OscilloscopeMeasureVpp"
-  },
-  {
-    "cases": [
-      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0",
-      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.mso5074",
-    "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeMeasureFrequency-0-transport-failure"
-    ],
-    "operation": "OscilloscopeMeasureFrequency"
-  },
-  {
-    "cases": [
-      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0",
-      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
-    ],
-    "disposition": "implemented-source-derived-no-hardware-evidence",
-    "driver": "rigol.mso5074",
-    "negativeCases": [
-      "rigol.mso5074|B|OscilloscopeCaptureVoltageTrace-0-transport-failure"
-    ],
-    "operation": "OscilloscopeCaptureVoltageTrace"
+    "operation": "OscilloscopeStop"
   },
   {
     "cases": [
