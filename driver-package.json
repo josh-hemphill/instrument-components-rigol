@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "rustPackage": "instrument-driver-rigol",
+  "nugetPackage": "InstrumentComponents.Drivers.Rigol",
+  "dotnetProject": "dotnet/InstrumentComponents.Drivers.Rigol/InstrumentComponents.Drivers.Rigol.csproj",
+  "version": "0.2.0-alpha.1",
+  "hardwareValidated": false
+}
